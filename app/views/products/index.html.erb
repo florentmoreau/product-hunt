@@ -1,6 +1,7 @@
 <div class="container">
   <h1>All products</h1>
-  <p> <%= link_to "Revenir à l'accueil", root_path, class: "btn btn-primary" %></p>
+  <p> <%= link_to "Back to home", root_path, class: "btn btn-primary" %></p>
+  <p> <%= link_to "Add a product", new_product_path, class: "btn btn-primary" %></p>
   <ul>
     <% @products.each do |product| %>
       <li>
