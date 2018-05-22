@@ -15,11 +15,21 @@
               <p><%= product.tagline %></p>
             </div>
             <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
-              <li><a href=""><i class="fa fa-heart"></i></a></li>
-              <li><a href=""><i class="fa fa-share"></i></a></li>
-              <li><a href=""><i class="fa fa-star"></i></a></li>
+              <li>
+                <%= link_to product_path(product) do %>
+                <i class="fa fa-eye"></i>
+                <% end %>
+              </li>
+                <%= link_to edit_product_path(product) do %>
+                <i class="fa fa-pencil"></i>
+                <% end %>
+                <%= link_to product_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+                <% end %>
             </ul>
           </div>
+
+          <% end %>
     </div>
   </div>
 </div>
