@@ -34,8 +34,15 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy
-    redirect_to products_path
+
+    if @product.user == current_user
+      @product.destroy
+      redirect_to products_path
+    else
+      flash[:alert] = "Your are not the owner"
+      redirect_to products_path
+    end
+
   end
 
   private
