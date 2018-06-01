@@ -5,7 +5,10 @@
     <p>
       <%= @product.tagline %>
       <span class="label label-default"><%= @product.category %></span>
-      </p>
+    </p>
+    <p>
+      Posted by <%= @product.user.email %>
+    </p>
     <%= link_to "Visit website", @product.url, class: "btn btn-primary btn-lg" %>
   </div>
 </div>

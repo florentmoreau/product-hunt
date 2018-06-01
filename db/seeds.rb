@@ -7,9 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Product.destroy_all
+#Product.destroy_all
+#User.destroy_all
 
-Product.create!(name: "kudoz", url: "http://kudoz.com", tagline: "tinder for job search")
-Product.create!(name: "uSlide", url: "http://uslide.com", tagline: "youtube sucks for education")
-Product.create!(name: "medpics", url: "http://medpics.com", tagline: "Share your diagnostics")
+thomas = User.create!(email: "thomas@thomas", password: "testtest")
+florent = User.create!(email: "florent@florent", password: "testtest")
+
+
+Product.create!(user: thomas, name: "kudoz", url: "http://kudoz.com", tagline: "tinder for job search", category: "tech")
+Product.create!(user: florent, name: "uSlide", url: "http://uslide.com", tagline: "youtube sucks for education", category: "education")
+Product.create!(user: florent, name: "medpics", url: "http://medpics.com", tagline: "Share your diagnostics", category: "tech")
 
