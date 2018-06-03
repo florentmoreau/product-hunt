@@ -17,3 +17,7 @@ yarn-error.log
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+#ignore application.yml in gti
+
+/config/application.yml

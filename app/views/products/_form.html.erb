@@ -3,6 +3,7 @@
 <%= f.input :url, placeholder: "http://kudoz.com", label: "Choose url"%>
 <%= f.input :tagline, placeholder: "Tinder for job search", label: "Choose tagline"%>
 <%= f.input :category, collection: ["tech", "education", "design"], prompt: "Which category"%>
+<%= f.input :photo, as: :attachinary %>
 <%= f.button :submit, "Add", class: "btn btn-primary"%>
 <% end %>
 

@@ -18,6 +18,10 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'jquery-rails'
 gem 'webpacker'
+gem 'cloudinary'
+gem "attachinary"
+gem "jquery-fileupload-rails"
+gem "coffee-rails"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
