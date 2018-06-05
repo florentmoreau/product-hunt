@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   resources :products
+  resources :upvotes, only: [ :create, :destroy]
 
    get "/team" => "pages#team"
    get "/contact" => "pages#join_us"

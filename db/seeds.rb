@@ -14,7 +14,10 @@ thomas = User.create!(email: "thomas@thomas", password: "testtest")
 florent = User.create!(email: "florent@florent", password: "testtest")
 
 
-Product.create!(user: thomas, name: "kudoz", url: "http://kudoz.com", tagline: "tinder for job search", category: "tech")
+kudoz = Product.create!(user: thomas, name: "kudoz", url: "http://kudoz.com", tagline: "tinder for job search", category: "tech")
 Product.create!(user: florent, name: "uSlide", url: "http://uslide.com", tagline: "youtube sucks for education", category: "education")
-Product.create!(user: florent, name: "medpics", url: "http://medpics.com", tagline: "Share your diagnostics", category: "tech")
+medpics = Product.create!(user: florent, name: "medpics", url: "http://medpics.com", tagline: "Share your diagnostics", category: "tech")
 
+kudoz.upvotes.create! user: thomas
+kudoz.upvotes.create! user: florent
+medpics.upvotes.create! user: florent
